@@ -3,5 +3,5 @@ play around with prime numbers. Added x86-64 (AMD64) support a few years later.
    
 compile with:
     
-nasm -f elf64 primecheck.asm
+nasm -f elf64 primecheck.asm<br>
 gcc -o prime prime.c primecheck.o
