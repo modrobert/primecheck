@@ -4,7 +4,7 @@
 ; primechk(unsigned long int) returns 1 if input (rax) is a prime,
 ; otherwise 0; 
 ; 
-; 386 opcodes with 64bit registers for AMD64 (and Intel)
+; 386 opcodes with 64bit registers for x86-64 (AMD64)
 ; 
 ;
 ; Optimization log: 
