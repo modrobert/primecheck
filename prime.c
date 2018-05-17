@@ -1,5 +1,5 @@
 /* prime.c by modrobert 	                        */
-/*                      							*/
+/*                                                  */
 /* Check or generate prime numbers using primechk()	*/
 /* External function written in AMD64 assembler		*/
 
