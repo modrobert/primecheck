@@ -1,7 +1,7 @@
-/* prime.c by modrobert 	                        */
+/* prime.c by modrobert                             */
 /*                                                  */
-/* Check or generate prime numbers using primechk()	*/
-/* External function written in AMD64 assembler		*/
+/* Check or generate prime numbers using primechk() */
+/* External function written in AMD64 assembler     */
 
 #include <stdio.h>
 #include <stdlib.h>
