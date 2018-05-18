@@ -1,4 +1,4 @@
-; primecheck.asm v0.64.9 
+; primecheck.asm v0.64.10 
 ; By modrobert <modrobert@gmail.com> 
 ; 
 ; primechk(unsigned long int) returns 1 if input (rax) is a prime,
