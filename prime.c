@@ -11,11 +11,13 @@
 #define TRUE 1
 #define ERROR 2
 #define BASE 10
-#define MAX64 18446744073709551614 /* 64bit - C needs one bit (2^64-2) */
+#define MAX64 18446744073709551614U /* 64bit - C needs one bit (2^64-2) */
+
+int arg_error(char *error);
 
 extern int primechk(long);
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
  unsigned long int invalue; /* value from commandline */
  unsigned long int value; /* value used in incremental loop */
@@ -69,11 +71,11 @@ main(int argc, char *argv[])
  }
 }
 
-arg_error(char *error)
+int arg_error(char *error)
 /* Writes argument-error-message to stderr. */
 {
- fprintf(stderr, "prime v0.64.9\n");
- fprintf(stderr, "=============\n");
+ fprintf(stderr, "prime v0.64.10\n");
+ fprintf(stderr, "==============\n");
  fprintf(stderr, "%s", error);
  fprintf(stderr, "Function: Generate or check for prime numbers\n");
  fprintf(stderr, "Syntax  : prime [-c] <64bit integer value>\n");
