@@ -56,7 +56,7 @@
 
 primechk:
 		mov r9,rbx		;save rbx since we use it
-		mov rcx,rax		;get our 64bit "prime suspect" ;)
+		mov rcx,rdi		;get our 64bit "prime suspect" ;)
 
 ; Eliminate low primes first, since square root rounded up don't work when 
 ; rax is less or equal to 5. Also save some important clocks in primeloop.
