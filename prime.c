@@ -1,4 +1,4 @@
-/* 
+/*
     prime checks or generate prime numbers using external function primechk()
     which is written in x86-64 (AMD64) assembler.
 
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
 	/* need at least one argument, but no more than two */
 	if(argc < 2 || argc > 3)
-		arg_error("Bad argument(s)\n"); 
+		arg_error("Bad argument(s)\n");
 
 	/* check if we are checking one prime only */
 	if(!strcmp(argv[1], "-c"))
@@ -70,19 +70,19 @@ int main(int argc, char *argv[])
 	}
 
 	/* check if too big for unsigned long int */
-	if(start > MAX64 || stop > MAX64) 
-		arg_error("The integer value is too large\n"); 
+	if(start > MAX64 || stop > MAX64)
+		arg_error("The integer value is too large\n");
 
 	/* set value to start of range */
 	value = start;
 
 	/* the prime check routine */
-	if(checkonly == TRUE && primechk(value) == TRUE) 
+	if(checkonly == TRUE && primechk(value) == TRUE)
 	{
 		printf("%lu is a prime\n", value);
 		exit(TRUE);
 	}
-	else if(checkonly == TRUE) 
+	else if(checkonly == TRUE)
 	{
 		printf("%lu is not a prime\n", value);
 		exit(FALSE);
@@ -93,8 +93,8 @@ int main(int argc, char *argv[])
 		{
 			if(primechk(value) == TRUE)
 				printf("%lu\n", value);
-			value++; 
-		} 
+			value++;
+		}
 	}
 
 	return 0;
