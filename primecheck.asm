@@ -1,4 +1,4 @@
-; primecheck.asm v0.64.10
+; primecheck.asm v0.64.12
 ;
 ; Copyright (C) 2002 Robert V. <modrobert@gmail.com>
 ;
@@ -74,8 +74,8 @@ primechk:
 
 ; Primes greater than 2 are always odd.
 
-                bt rcx,0                ;check for bit 0 (0-63)
-                jnc noprime             ;not set? not odd, no prime, exit
+		bt rcx,0		;check for bit 0 (0-63)
+		jnc noprime		;not set? not odd, no prime, exit
 
 	
 ; Now eliminate numbers that aren't primes by dividing with all odd multiples 
@@ -88,11 +88,11 @@ primeloop:
 		mov rax,rbx		;move current divisor to multiplicand
 		mul rbx			;multiply by self
 		jo prime		;if overflow is set, we got a prime
-		cmp rax,rcx 		;check result > square root?
+		cmp rax,rcx		;check result > square root?
 		ja prime		;ok, we got a prime 
 		cmp rbx,rcx		;we finished dividing?
-		jae prime               ;yes, we got a prime
-		mov rax,rcx             ;preparing for divide
+		jae prime		;yes, we got a prime
+		mov rax,rcx		;preparing for divide
 		mov rdx,0x0		;clearing the high word dividend
 		div rbx			;divide
 		cmp rdx,0x0		;check if remainder equals 0
@@ -110,5 +110,5 @@ prime:
 
 finito:	
 		mov rbx,r9		;restore rbx since we used it
-		ret			;return to caller
+		ret				;return to caller
 
