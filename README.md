@@ -21,5 +21,6 @@ Example usage:
 ```
 ./prime 1 100 
 ./prime 1 500 | column
+./prime 1
 ./prime -c 2
 ```
