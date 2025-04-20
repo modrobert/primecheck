@@ -7,6 +7,7 @@ nasm -f elf64 primecheck.asm
 gcc -Wpedantic -z noexecstack -o prime prime.c primecheck.o
 ```
 
+Description:
 ```
 prime v0.64.12
 ==============
