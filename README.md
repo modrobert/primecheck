@@ -2,8 +2,10 @@ I wrote this back in 2002 mainly to learn how to mix assembler with C and to
 play around with prime numbers. Added x86-64 (AMD64) support a few years later.
    
 Compile with:
+```
 nasm -f elf64 primecheck.asm
 gcc -Wpedantic -z noexecstack -o prime prime.c primecheck.o
+```
 
 ```
 prime v0.64.12
@@ -15,6 +17,8 @@ Returns : 0 if no prime, 1 if prime, 2 if error
 ```
 
 Example usage:
+```
 ./prime 1 100 
 ./prime 1 500 | column
 ./prime -c 2
+```
